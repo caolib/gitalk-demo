@@ -1,19 +1,53 @@
 <script setup lang="ts">
 // import HelloWorld from './components/HelloWorld.vue'
+import {useRouter} from "vue-router";
+
+const router = useRouter();
+
 </script>
 
 <template>
-  <div>
-    <!--<router-link to="/">Home</router-link> |-->
-    <router-link to="/gitalk">Gitalk</router-link> |
-    <router-link to="/giscus">Giscus</router-link>
 
+  <el-tabs id="comment-route">
+    <el-tab-pane>
+      <template #label>
+        <el-button type="success" link @click="router.push('/gitalk')">
+          <span class="sel-text">Gitalk</span>
+        </el-button>
+      </template>
+    </el-tab-pane>
+
+    <el-tab-pane>
+      <template #label>
+        <el-button type="success" link @click="router.push('/giscus')">
+          <span class="sel-text">Giscus</span>
+        </el-button>
+      </template>
+    </el-tab-pane>
+
+  </el-tabs>
+
+  <div>
+    <!--<div id="comment-route">-->
+    <!--  <el-button type="success" @click="router.push('/gitalk')">Gitalk</el-button>-->
+    <!--  <el-button type="success" @click="router.push('/giscus')">Giscus</el-button>-->
+    <!--</div>-->
     <router-view/>
+    <el-backtop :right="50" :bottom="50"/>
   </div>
 </template>
 
 <style scoped>
 
+#comment-route {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.sel-text{
+  font-weight: bold;
+  font-size: large;
+}
 
 </style>
