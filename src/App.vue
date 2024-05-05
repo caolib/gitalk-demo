@@ -1,5 +1,4 @@
 <script setup lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
 import {useRouter} from "vue-router";
 
 const router = useRouter();
@@ -28,10 +27,6 @@ const router = useRouter();
   </el-tabs>
 
   <div>
-    <!--<div id="comment-route">-->
-    <!--  <el-button type="success" @click="router.push('/gitalk')">Gitalk</el-button>-->
-    <!--  <el-button type="success" @click="router.push('/giscus')">Giscus</el-button>-->
-    <!--</div>-->
     <router-view/>
     <el-backtop :right="50" :bottom="50"/>
   </div>

@@ -13,7 +13,6 @@ declare module 'vue' {
     ElTabs: typeof import('element-plus/es')['ElTabs']
     GiscusView: typeof import('./src/components/GiscusView.vue')['default']
     GitalkView: typeof import('./src/components/GitalkView.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

@@ -1,10 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 import GitalkView from './components/GitalkView.vue'
 import GiscusView from './components/GiscusView.vue'
 
 const routes = [
-    { path: '/', component: HelloWorld },
+    { path: '/', component: GiscusView },
     { path: '/gitalk', component: GitalkView },
     { path: '/giscus', component: GiscusView }
 ]
